@@ -18,7 +18,7 @@ module.exports = {
       height: { "h-100": "28rem", "h-102": "31,87rem" },
       width: { "w-100": "32rem" },
       maxWidth: { "max-w-medium": "50%", "max-w-xl": "70%" },
-      fontFamily: { "dancing-script": "Dancing-Script" },
+      fontFamily: { "dancing-script": "Dancing Script" },
       backgroundImage: {
         "bg-form":
           "url('https://i.pinimg.com/564x/98/3d/c2/983dc27707ea0b87fce20e7afb10b32a.jpg')",

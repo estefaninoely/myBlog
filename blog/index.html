@@ -5,8 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
-    <link rel="stylesheet" href="font/" />
-  </head>
+    <link rel="stylesheet" href="./src/style.css"/>
   <body>
     <header>
       <div class="flex justify-around items-center pt-8 pb-8 font-semibold">
@@ -286,7 +285,7 @@
       </div>
       <div class="bg-gray-100 flex flex-col">
         <h1 class="text-center">EXPLORE MORE</h1>
-        <iframe
+        <!---<iframe
           class="self-center m-24"
           width="560"
           height="315"
@@ -295,50 +294,32 @@
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
-        ></iframe>
+        ></iframe>--->
       </div>
     </section>
     <section>
       <div class="bg-bg-form bg-no-repeat bg-cover">
         <div class="">
-          <h1>CONTACT ME</h1>
-          <div>
-            <form
-              class="text-darkest bg-slate-200 flex flex-col rounded-lg p-4"
-            >
-              <label for="name"
-                >Name
-                <input
-                  class="bg-slate-200"
-                  type="text"
-                  placeholder="Enter your Name"
-                />
-              </label>
-              <label for="email"
-                >Email
-                <input
-                  class="bg-slate-200"
-                  type="text"
-                  placeholder="Enter your Email"
-                />
-              </label>
-              <label for="mesagge"
-                >Message
-                <input
-                  class="bg-slate-200"
-                  type="text"
-                  placeholder="Enter Your Message"
-                />
-              </label>
-            </form>
-            <p class="text-white">
+          <h1 class="text-center">CONTACT ME</h1>
+           <div class=" flex justify-center items-center gap-16 p-20">
+             <form class="bg-gray-300 text-darkest flex flex-col w-w-100 items-center" id="contact-form">
+              <input id="contact_number" class="h-12 w-80" type="hidden" name="contact_number">
+              <label>Name</label>
+              <input class="h-12 w-80" type="text" name="user_name">
+              <label>Email</label>
+              <input class="h-12 w-80" type="email" name="user_email">
+              <label>Message</label>
+              <textarea class="p-16" name="message"></textarea>
+              <input class="bg-rosa
+              text-white rounded-md w-24 h-12 m-8" type="submit" value="Send">
+             </form>
+              <p class="text-white w-52 text-2xl">
               IF YOU ARE INTERESTED AND WOULD LIKE TO KNOW MORE ABOUT WHAT I DO
-            </p>
-            <button class="text-white bg-rosa rounded-md p-2">CLICK</button>
-          </div>
+              </p>
+           </div>
         </div>
       </div>
     </section>
-    <script type="module" src="/src/main.ts"></script>
+    <script src="src/main.ts" type="module"></script>
   </body>
 </html>

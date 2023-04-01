@@ -1,24 +1,24 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter'
+import emailjs from "@emailjs/browser";
+window.onload = function () {
+  const contact = document.querySelector("#contact_number");
+  console.log(contact);
+  const form = document.getElementById("contact-form") as HTMLFormElement;
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    // generate a five digit number for the contact_number variable
+    /*contact.value = (Math.random() * 100000) | 0;*/
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+    // these IDs from the previous steps
+    emailjs.sendForm("default_service", "contact_form", form).then(
+      function () {
+        console.log("SUCCESS!");
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+  });
+};
+
+emailjs.init("TuYIcxd6UlaulmG7X");
